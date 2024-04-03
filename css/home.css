@@ -8,7 +8,7 @@
 
 	--button-radius:0.7rem;
 	--max-width:758px;
-	--max-height:450px;
+	--max-height:580px;
 
 	font-size:16px;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}
@@ -23,11 +23,10 @@ body{
 	display: grid;
 	height: 100vh;
 	place-items: center;
-	
 }
 
 .from_title{
-	font-weight: 300;
+	font-weight: 200px;
 	margin: 0;
 	margin-bottom: 1.25rem;
 } 
@@ -44,15 +43,17 @@ body{
 	box-shadow: 0 0.9rem 1.7rem rgba(0,0,0,0.25);
 	height: var(--max-height);
 	max-width: var(--max-width);
+	transform: translateY(-50px);
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+	
 }
 
 .container_from{
 	height: 100%;
 	position: absolute;
-	top: 0;
+	top: 20px;
 	transition: all 0.6s ease-in-out;
 }
 
@@ -61,6 +62,7 @@ body{
 	opacity: 1;
 	width: 50%;
 	z-index: 2;
+	
 }
 
 .container.right-panel-active .container--signup{
@@ -86,7 +88,7 @@ body{
 	left:50%;
 	overflow: hidden;
 	position: absolute;
-	top:0;
+	top: 0;
 	transition: transform 0.6s ease-in-out;
 	width: 50%;
 	z-index: 2;
@@ -106,7 +108,7 @@ body{
 	left: -100%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
-	width: 100%; 
+	width: 100%;
 }
 
 .container.right-panel-active.overlay{
@@ -156,7 +158,9 @@ body{
 	letter-spacing: 0.1rem;
 	padding: 0.9rem 2rem;
 	text-transform: uppercase;
-	transform: transform 80ms ease-in;
+	transform: transform 80ms ease-in; 
+	cursor: pointer;
+	border: aliceblue;
 }
 
 .form>.btn{
@@ -171,22 +175,88 @@ body{
 }
 
 .form{
-	background-color: var(--white);
+	 background-color: var(--white);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 3rem;
+	top=0;
 	height: 100%;
 	text-align: center;
+	line-height: 5px;
+	.info{
+		font-size: 12px;
+		padding-top: 2px;
+		visibility: hidden;
+		color: black;
+	}
+	.info2{
+		width: 260px;
+		align-items: left;
+		position: relative;
+			.btn1{
+		        position: absolute;
+		        top: 7.5px;
+				line-height: 0;
+				outline-width: 100%;
+				width:160px;
+				height: 45px;
+				left: 50%;
+				background-color: var(--lightblue);
+				background-image: linear-gradient(90deg.var(--blue) 0%,var(--lightblue) 74%);
+				border-radius: 20px;
+				color: var(--white);
+				cursor: pointer;
+				font-size: 0.8rem;
+				font-weight: bold;
+				letter-spacing: 0.1rem;
+				padding: 0.9rem 2rem;
+				border: aliceblue;
+		       }
+			.info2>.btn1{
+				margin-top: 1.5rem;
+			}
+			
+			.btn1:active{
+				transform: scale(0.95);
+			}
+			.btn1:focus{
+				outline: none;
+			}
+	}
+	position: relative;
+	.email{
+		position: absolute;
+		margin-top: 70px;
+		height: 40px;
+		right: 35px;
+		font-size: 16px;
+		border-radius: 20px;
+		border: none;
+	}
 }
-	
+
 .input{
 	background-color: #fff;
 	border: none;
 	padding: 0.9rem 0.9rem;
 	margin:0.5rem 0;
 	width: 100%;
+	border-radius: 20px;
+}
+.form>.input{
+	margin-top: 1.5rem;
+}
+
+.input:active{
+	transform: scale(0.95);
+}
+.input:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
 }
 @keyframes show {
 	0%
@@ -199,4 +269,216 @@ body{
 		opacity: 1;
 		z-index: 5;
 	}
-} 
+	
+}
+.danger{
+	color: rgb(199,61,61) !important;
+	visibility: visible !important;
+}
+.true{
+	color:green !important;
+	visibility: visible !important;
+}
+.input1{
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin:0.5rem 0;
+	width: 100%;
+	border-radius: 20px;
+}
+.form>.input1{
+	margin-top: 1.5rem;
+}
+
+.input1:active{
+	transform: scale(0.95);
+}
+.input1:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
+}
+.input2{
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin:0.5rem 0;
+	width: 100%;
+	border-radius: 20px;
+}
+.form>.input2{
+	margin-top: 1.5rem;
+}
+
+.input2:active{
+	transform: scale(0.95);
+}
+.input2:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
+}
+.input3{
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin:0.5rem 0;
+	width: 100%;
+	border-radius: 20px;
+}
+.form>.input3{
+	margin-top: 1.5rem;
+}
+
+.input3:active{
+	transform: scale(0.95);
+}
+.input3:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
+}
+.input4{
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin:0.5rem 0;
+	width: 100%;
+	border-radius: 20px;
+}
+.form>.input4{
+	margin-top: 1.5rem;
+}
+
+.input4:active{
+	transform: scale(0.95);
+}
+.input4:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
+}
+.inputa{
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin:0.5rem 0;
+	width: 100%;
+	border-radius: 20px;
+}
+.form>.inputa{
+	margin-top: 1.5rem;
+}
+
+.inputa:active{
+	transform: scale(0.95);
+}
+.inputa:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
+}
+.inputb{
+	background-color: #fff;
+	border: none;
+	padding: 0.9rem 0.9rem;
+	margin:0.5rem 0;
+	width: 100%;
+	border-radius: 20px;
+}
+.form>.inputb{
+	margin-top: 1.5rem;
+}
+
+.inputb:active{
+	transform: scale(0.95);
+}
+.inputb:focus{
+	outline: none;
+	+.info{
+		visibility: visible;
+	}
+}
+.btn2{
+	background-color: var(--lightblue);
+	background-image: linear-gradient(90deg.var(--blue) 0%,var(--lightblue) 74%);
+	border-radius: 20px;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	transform: transform 80ms ease-in; 
+	cursor: pointer;
+}
+
+.form>.btn2{
+	margin-top: 1.5rem;
+}
+
+.btn2:active{
+	transform: scale(0.95);
+}
+.btn2:focus{
+	outline: none;
+}
+.btn4{
+	background-color: var(--lightblue);
+	background-image: linear-gradient(90deg.var(--blue) 0%,var(--lightblue) 74%);
+	border-radius: 20px;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	transform: transform 80ms ease-in; 
+	cursor: pointer;
+	border: none;
+}
+
+.form>.btn4{
+	margin-top: 1.5rem;
+}
+
+.btn4:active{
+	transform: scale(0.95);
+}
+.btn4:focus{
+	outline: none;
+}
+.btn5{
+	background-color: var(--lightblue);
+	background-image: linear-gradient(90deg.var(--blue) 0%,var(--lightblue) 74%);
+	border-radius: 20px;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 2rem;
+	text-transform: uppercase;
+	transform: transform 80ms ease-in; 
+	cursor: pointer;
+	border: none;
+}
+
+.form>.btn5{
+	margin-top: 1.5rem;
+}
+
+.btn5:active{
+	transform: scale(0.95);
+}
+.btn5:focus{
+	outline: none;
+}
